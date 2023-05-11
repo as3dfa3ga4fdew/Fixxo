@@ -1,0 +1,23 @@
+﻿.product-collection-item{
+    width: 250px;
+    margin: 10px;
+}
+
+.product-collection-item > a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+.product-collection-item > a > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-collection-item > a > div *{
+    margin: 4px;
+}

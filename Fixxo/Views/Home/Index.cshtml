@@ -1,0 +1,49 @@
+﻿@model HomeViewModel
+
+@*Home showcase*@
+
+@*Featured collection partial*@
+
+@*Popular Showcase*@
+@*Popular collection partial*@
+
+@*New showcase*@
+@*New collection*@
+
+<div class="home-container">
+    <section>
+        <div>
+            <h2>GET UP TO %40 OFF</h2>
+            <h1>Don't Miss This Opportunity</h1>
+            <p>Online shopping free home delivery over $100</p>
+            <a asp-action="Featured" asp-controller="Products">SHOW NOW</a>
+        </div>
+        <img src="images/showcase-img.png" />
+
+    </section>
+
+    <section>
+        <partial name="~/Views/Shared/Partials/_ProductCollectionPartial.cshtml" model="@Model.FeaturedProductCollection" />
+    </section>
+
+    <section>
+        <partial name="~/Views/Shared/Partials/_TagShowcasePartial.cshtml" model="@Model.NewShowcase" />
+        <div>
+            <partial name="~/Views/Shared/Partials/_ProductCollectionPartial.cshtml" model="@Model.NewProductCollection" />
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <partial name="~/Views/Shared/Partials/_ProductCollectionPartial.cshtml" model="@Model.PopularProductCollection" />
+        </div>
+        <partial name="~/Views/Shared/Partials/_TagShowcasePartial.cshtml" model="@Model.PopularShowcase" />
+    </section>
+
+    <section>
+    </section>
+
+    <section>
+    </section>
+
+</div>

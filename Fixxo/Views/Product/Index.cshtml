@@ -1,0 +1,13 @@
+﻿@model ProductViewModel
+
+<div>
+    <section>
+        <partial name="~/Views/Shared/Partials/_ProductDetailPartial.cshtml" model="@Model.Product" />
+    </section>
+    <section>
+
+    </section>
+    <section>
+        <partial name="~/Views/Shared/Partials/_ProductCollectionPartial.cshtml" model="@Model.RelatedProductCollection" />
+    </section>
+</div>

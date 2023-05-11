@@ -1,0 +1,16 @@
+﻿@model ProductCollectionItemModel
+
+<div class="product-collection-item">
+    <a asp-controller="Product" asp-action="Index" asp-route-id="@Model.Id">
+        <img src="~/images/@Model.ImagePath"  />
+
+        <div>
+            <h4>@Model.Name</h4>
+            <partial name="~/Views/Shared/Partials/_StarRatingPartial.cshtml" model="@Model.Rating" />
+            <b>$@Model.Price</b>
+        </div>
+    </a>
+</div>
+
+
+

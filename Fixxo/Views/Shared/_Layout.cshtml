@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Fixxo</title>
+   
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/productCollection.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/productCollectionItem.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/starrating.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tagshowcase.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/productdetail.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/d9c2b14bb7.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+
+    <partial name="~/Views/Shared/Partials/_HeaderPartial.cshtml" />
+
+    @RenderBody()
+
+    <partial name="~/Views/Shared/Partials/_FooterPartial.cshtml" />
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

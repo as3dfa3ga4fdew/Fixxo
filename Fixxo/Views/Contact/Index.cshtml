@@ -1,0 +1,59 @@
+﻿@model ContactViewModel;
+
+<form method="post" class="contact-form">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    
+    <div class="contact-container">
+
+        @*info text*@
+        <div>
+            <b>Come in contact with us</b>
+        </div>
+
+        @*name/email*@
+        <div>
+
+            <div>
+                <input asp-for="Name" placeholder="Your Name" />
+                <span asp-validation-for="Name" class="error-color"></span>
+            </div>
+
+            <div>
+                <input asp-for="Email" placeholder="Your Email" />
+                <span asp-validation-for="Email" class="error-color"></span>
+            </div>
+
+        </div>
+
+        @*message*@
+        <div>
+            <div>
+                @*<input asp-for="Message" type="text" placeholder="Message" />*@
+                <textarea asp-for="Message" placeholder="Message"></textarea>
+                <span asp-validation-for="Message" class="error-color"></span>
+            </div>
+        </div>
+
+        @*submit*@
+        <div>
+
+            <div>
+                <button>Submit</button>
+            </div>
+            <div>
+                @if (Model == null)
+                {
+                    @*<p>We have received your message and we will contact your shortly.</p>*@
+                }
+                else
+                {
+                    <p>@Model.Result</p>
+                }
+            </div>
+
+        </div>
+
+    </div>
+</form>
+

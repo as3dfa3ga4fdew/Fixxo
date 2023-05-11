@@ -1,0 +1,120 @@
+﻿.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-container > section{
+    margin: 20px;
+}
+
+
+.home-container > section:nth-child(1){
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #F4F4F4;
+    padding: 7px;
+    text-align: center;
+}
+
+.home-container > section:nth-child(1) > div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container > section:nth-child(1) > img{
+    width: 744px;
+    height: 833px;
+    transform: translate(1058, 86);
+}
+
+.home-container > section:nth-child(1) > div > a {
+    all: unset;
+    background-color: #FF7373;
+    font-size: 20px;
+    padding: 6px;
+    width: 150px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.home-container > section:nth-child(1) > div > h1{
+    font-size:50px;
+}
+
+
+.home-container > section:nth-child(1) > div > h2{
+    font-size:30px;
+}
+
+.home-container > section:nth-child(1) > div > p{
+    font-size:20px;
+}
+
+
+
+.home-container > section:nth-child(2){
+    width: 1120px;
+}
+
+.home-container > section:nth-child(3), .home-container > section:nth-child(4){
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.home-container > section:nth-child(3) > div{
+    margin-right: 20px;
+}
+
+.home-container > section:nth-child(4) > div{
+    margin-left: 20px;
+}
+
+.home-container > section:nth-child(3) > *, .home-container > section:nth-child(4) > *  {
+    width: 50%;
+    align-self: stretch;
+}
+
+
+@media (max-width: 1160px) {
+
+    .home-container > section:nth-child(2) {
+        width: 100%;
+    }
+
+    .home-container > section:nth-child(3) {
+        flex-direction: column;
+    }
+
+    .home-container > section:nth-child(3) > div{
+        margin-right: 0px;
+    }
+
+    .home-container > section:nth-child(4) > div {
+        margin-left: 0px;
+    }
+
+    .home-container > section:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .home-container > section:nth-child(3) > *, .home-container > section:nth-child(4) > * {
+        width: 100%;
+    }
+
+    .home-container > section:nth-child(1) > img {
+        display: none;
+    }
+    .home-container > section:nth-child(1) > div {
+        width: 100%;
+    }
+}
+

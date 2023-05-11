@@ -1,0 +1,13 @@
+﻿@model int
+
+<div class="star-rating">
+    @for (int i = 0; i < 5; i++)
+    {
+        if(Model > i)
+        {
+            <i class="fa-solid fa-star" style="color: #FF7373"></i>
+            continue;
+        }
+        <i class="fa-regular fa-star" style="color: #FF7373"></i>
+    }
+</div>
